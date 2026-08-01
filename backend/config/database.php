@@ -1,10 +1,10 @@
 <?php
 
-$host = getenv("mysql.railway.internal");
-$dbname = getenv("railway");
-$username = getenv("root");
-$password = getenv("gIpURrUhQpxFkELeeuyHNwiYaHzxveYZ");
-$port = getenv("3306");
+$host = getenv("MYSQLHOST");
+$dbname = getenv("MYSQLDATABASE");
+$username = getenv("MYSQLUSER");
+$password = getenv("MYSQLPASSWORD");
+$port = getenv("MYSQLPORT");
 
 try {
 
@@ -16,8 +16,7 @@ try {
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-}
-catch (PDOException $e) {
+} catch (PDOException $e) {
 
     die("Database Connection Failed: " . $e->getMessage());
 
