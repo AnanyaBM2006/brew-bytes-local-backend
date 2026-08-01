@@ -1,10 +1,14 @@
 <?php
 
-$host = getenv("MYSQLHOST");
-$dbname = getenv("MYSQLDATABASE");
-$username = getenv("MYSQLUSER");
-$password = getenv("MYSQLPASSWORD");
-$port = getenv("MYSQLPORT");
+echo "<pre>";
+
+var_dump(getenv("MYSQLHOST"));
+var_dump(getenv("MYSQLDATABASE"));
+var_dump(getenv("MYSQLUSER"));
+var_dump(getenv("MYSQLPASSWORD"));
+var_dump(getenv("MYSQLPORT"));
+
+exit;
 
 try {
 
