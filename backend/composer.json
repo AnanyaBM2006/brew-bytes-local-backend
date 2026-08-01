@@ -1,0 +1,7 @@
+{
+  "name": "v2cafe/backend",
+  "description": "V2 Cafe Backend",
+  "require": {
+    "php": "^8.2"
+  }
+}
