@@ -1,14 +1,15 @@
 <?php
 
-$host = "localhost";
-$dbname = "brew_bytes";
-$username = "root";
-$password = "";
+$host = getenv("mysql.railway.internal");
+$dbname = getenv("railway");
+$username = getenv("root");
+$password = getenv("gIpURrUhQpxFkELeeuyHNwiYaHzxveYZ");
+$port = getenv("3306");
 
 try {
 
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8",
+        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8",
         $username,
         $password
     );
