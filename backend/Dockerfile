@@ -1,13 +1,9 @@
 FROM php:8.2-apache
 
-RUN docker-php-ext-install pdo pdo_mysql
-
-RUN a2enmod rewrite
+RUN docker-php-ext-install pdo_mysql
 
 WORKDIR /var/www/html
 
-COPY . .
+COPY . /var/www/html
 
 EXPOSE 80
-
-CMD ["apache2-foreground"]
