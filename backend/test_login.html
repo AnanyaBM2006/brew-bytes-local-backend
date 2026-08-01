@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="login()">Test Login</button>
+
+<pre id="result"></pre>
+
+<script>
+async function login() {
+
+const response = await fetch("http://10.122.41.31/brew_bytes/backend/api/auth/login.php", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+username: "owner",
+password: "owner123"
+})
+});
+
+const data = await response.json();
+
+document.getElementById("result").textContent =
+JSON.stringify(data, null, 2);
+
+}
+</script>
+
+</body>
+</html>

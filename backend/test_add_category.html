@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Add Category</title>
+</head>
+
+<body>
+
+<h2>Add Category Test</h2>
+
+<input type="text" id="category" placeholder="Category Name">
+<br><br>
+
+<input type="text" id="description" placeholder="Description">
+<br><br>
+
+<button onclick="addCategory()">Add Category</button>
+
+<pre id="result"></pre>
+
+<script>
+
+async function addCategory(){
+
+    const response = await fetch("http://10.122.41.31/brew_bytes/backend/api/categories/add_category.php",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            category_name:document.getElementById("category").value,
+
+            description:document.getElementById("description").value
+
+        })
+
+    });
+
+    const data=await response.json();
+
+    document.getElementById("result").innerHTML=
+    JSON.stringify(data,null,4);
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.v2cafe.app",
+  "appName": "V2 Cafe",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true
+  }
+}

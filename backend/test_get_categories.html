@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Categories</title>
+</head>
+
+<body>
+
+<h2>Categories</h2>
+
+<button onclick="loadCategories()">
+Load Categories
+</button>
+
+<pre id="result"></pre>
+
+<script>
+
+async function loadCategories(){
+
+    const response=await fetch(
+    "http://10.122.41.31/brew_bytes/backend/api/categories/get_categories.php"
+    );
+
+    const data=await response.json();
+
+    document.getElementById("result").innerHTML=
+    JSON.stringify(data,null,4);
+
+}
+
+</script>
+
+</body>
+
+</html>

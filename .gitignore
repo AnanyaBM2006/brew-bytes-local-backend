@@ -1,0 +1,22 @@
+# Email credentials
+backend/config/email_config.php
+
+# Android build files
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/build/
+
+# React build
+frontend/dist/
+
+# Node modules
+frontend/node_modules/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
