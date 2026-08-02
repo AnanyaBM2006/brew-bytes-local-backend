@@ -1,4 +1,3 @@
-//$emailConfig = require_once "../../config/email_config.php";
 <?php
 
 require_once "../../config/cors.php";
